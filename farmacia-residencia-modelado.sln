@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "farmacia-residencia-modelado", "farmacia-residencia-modelado\farmacia-residencia-modelado.csproj", "{8CDD50A5-36DA-4028-B3D4-7BA98399AE14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clases-farmacia", "clases-farmacia\clases-farmacia.csproj", "{0234F43C-2443-415B-A5DF-DCA410DEB7DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CDD50A5-36DA-4028-B3D4-7BA98399AE14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CDD50A5-36DA-4028-B3D4-7BA98399AE14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CDD50A5-36DA-4028-B3D4-7BA98399AE14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CDD50A5-36DA-4028-B3D4-7BA98399AE14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0234F43C-2443-415B-A5DF-DCA410DEB7DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0234F43C-2443-415B-A5DF-DCA410DEB7DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0234F43C-2443-415B-A5DF-DCA410DEB7DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0234F43C-2443-415B-A5DF-DCA410DEB7DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E65D9C10-BB9B-4C35-BD8A-8AC5539550E8}
+	EndGlobalSection
+EndGlobal
