@@ -13,7 +13,7 @@ namespace clases_farmacia.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202010231958441_inicio"; }
+            get { return "202010232149529_inicio"; }
         }
         
         string IMigrationMetadata.Source

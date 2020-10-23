@@ -10,9 +10,9 @@ namespace clases_farmacia
 {
     public class Medicamento
     {
-        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        [Key]
         [Required]
         public int Codigo { get; set; }
         [Required]

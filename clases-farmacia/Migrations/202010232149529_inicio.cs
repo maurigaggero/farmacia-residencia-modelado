@@ -22,14 +22,14 @@
                 "dbo.Medicamentos",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
                         Codigo = c.Int(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
                         Nombre = c.String(nullable: false),
                         Laboratorio = c.String(nullable: false),
                         Fecha_Vencimiento = c.DateTime(nullable: false),
                         Unidad = c.String(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Codigo);
             
         }
         

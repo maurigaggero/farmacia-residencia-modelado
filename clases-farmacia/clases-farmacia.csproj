@@ -118,9 +118,9 @@
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Inventario.cs" />
     <Compile Include="Medicamento.cs" />
-    <Compile Include="Migrations\202010231958441_inicio.cs" />
-    <Compile Include="Migrations\202010231958441_inicio.designer.cs">
-      <DependentUpon>202010231958441_inicio.cs</DependentUpon>
+    <Compile Include="Migrations\202010232149529_inicio.cs" />
+    <Compile Include="Migrations\202010232149529_inicio.designer.cs">
+      <DependentUpon>202010232149529_inicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,8 +130,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010231958441_inicio.resx">
-      <DependentUpon>202010231958441_inicio.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010232149529_inicio.resx">
+      <DependentUpon>202010232149529_inicio.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
