@@ -8,7 +8,7 @@
     <ProjectGuid>{8CDD50A5-36DA-4028-B3D4-7BA98399AE14}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>farmacia_residencia_modelado</RootNamespace>
-    <AssemblyName>farmacia-residencia-modelado</AssemblyName>
+    <AssemblyName>form-farmacia</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -75,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
