@@ -14,13 +14,11 @@ namespace clases_farmacia
         public int Id { get; set; }
         [Key]
         [Required]
-        public int Codigo { get; set; }
+        public long Codigo { get; set; }
         [Required]
         public string Nombre { get; set; }
         [Required]
         public string Laboratorio { get; set; }
-        [Required]
-        public DateTime Fecha_Vencimiento { get; set; }
         public string Unidad { get; set; }
     }
 }

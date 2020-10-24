@@ -30,7 +30,6 @@
         {
             this.txtCod = new System.Windows.Forms.TextBox();
             this.txtNom = new System.Windows.Forms.TextBox();
-            this.txtLabo = new System.Windows.Forms.TextBox();
             this.btn_Buscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -50,21 +49,11 @@
             // 
             this.txtNom.BackColor = System.Drawing.Color.Silver;
             this.txtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNom.Location = new System.Drawing.Point(262, 69);
+            this.txtNom.Location = new System.Drawing.Point(256, 69);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(110, 22);
             this.txtNom.TabIndex = 1;
             this.txtNom.Text = "Nombre";
-            // 
-            // txtLabo
-            // 
-            this.txtLabo.BackColor = System.Drawing.Color.Silver;
-            this.txtLabo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLabo.Location = new System.Drawing.Point(444, 69);
-            this.txtLabo.Name = "txtLabo";
-            this.txtLabo.Size = new System.Drawing.Size(110, 22);
-            this.txtLabo.TabIndex = 2;
-            this.txtLabo.Text = "Laboratorio";
             // 
             // btn_Buscar
             // 
@@ -94,7 +83,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_Buscar);
-            this.Controls.Add(this.txtLabo);
             this.Controls.Add(this.txtNom);
             this.Controls.Add(this.txtCod);
             this.MaximizeBox = false;
@@ -112,7 +100,6 @@
 
         private System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.TextBox txtNom;
-        private System.Windows.Forms.TextBox txtLabo;
         private System.Windows.Forms.Button btn_Buscar;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
