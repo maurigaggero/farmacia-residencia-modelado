@@ -96,6 +96,10 @@
       <Project>{0234f43c-2443-415b-a5df-dca410deb7df}</Project>
       <Name>clases-farmacia</Name>
     </ProjectReference>
+    <ProjectReference Include="..\datos-farmacia\datos-farmacia.csproj">
+      <Project>{72b95be9-69db-418f-a4ff-21de5185c066}</Project>
+      <Name>datos-farmacia</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
