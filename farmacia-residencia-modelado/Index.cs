@@ -13,45 +13,101 @@ namespace farmacia_residencia_modelado
 {
     public partial class Index : Form
     {
+        DatosMedicamentos medic = new DatosMedicamentos();
+
+        DataSet ds = new DataSet();
         public Index()
         {
             InitializeComponent();
         }
 
-        private void LlenarDg(string cual)
+        #region METODOS
+        private void LlenarDgNombre(string cual)
         {
-            DatosMedicamentos medic = new DatosMedicamentos();
-
             dg.Rows.Clear();
-            if (cual == "Todos")
+            if (cual == string.Empty)
             {
-                DataSet ds = new DataSet();
-                ds = medic.consultarMedicamento("todos");
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    foreach (DataRow dr in ds.Tables[0].Rows)
-                    {
-                        dg.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5]);
-                    }
-                }
+                ds = medic.consultarMedicamento("");
             }
             else
             {
-                DataSet ds = new DataSet();
                 ds = medic.consultarMedicamento(cual);
-                if (ds.Tables[0].Rows.Count > 0)
+            }
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    foreach (DataRow dr in ds.Tables[0].Rows)
-                    {
-                        dg.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5]);
-                    }
+                    dg.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5]);
                 }
             }
         }
 
-        private void btn_Buscar_Click(object sender, EventArgs e)
+        private void LlenarDgVencimiento(int meses)
         {
-            LlenarDg(txtNom.Text);
+            dg.Rows.Clear();
+            if (meses == 0)
+            {
+                ds = medic.consultarVencimiento(0);
+            }
+            else
+            {
+                ds = medic.consultarVencimiento(meses);
+            }
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    dg.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5]);
+                }
+            }
         }
+
+        private void LlenarDgCodigo(string codigo)
+        {
+            dg.Rows.Clear();
+            if (codigo == "")
+            {
+                ds = medic.consultarCodigo("");
+            }
+            else
+            {
+                ds = medic.consultarCodigo(codigo);
+            }
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    dg.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5]);
+                }
+            }
+        }
+        #endregion
+
+        #region EVENTOS
+        private void txtNom_TextChanged(object sender, EventArgs e)
+        {
+            LlenarDgNombre(txtNom.Text);
+        }
+
+        private void combo_venc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combo_venc.SelectedIndex != -1)
+            {
+                LlenarDgVencimiento(combo_venc.SelectedIndex);
+            }
+            else
+            {
+
+            }
+        }
+
+        private void txt_codigo_TextChanged(object sender, EventArgs e)
+        {
+            LlenarDgCodigo(txt_codigo.Text);
+        }
+        #endregion
     }
 }
