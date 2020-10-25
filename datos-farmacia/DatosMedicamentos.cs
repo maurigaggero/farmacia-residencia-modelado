@@ -48,6 +48,44 @@ namespace datos_farmacia
             return ds;
         }
 
+        public DataSet consultarLaboratorio(string cual)
+        {
+            string orden = string.Empty;
+
+            if (cual != string.Empty)
+                orden = "select m.Codigo, m.Nombre, m.Laboratorio, m.Unidad, i.Cantidad, i.Fecha_Vencimiento" +
+                         " from Medicamentos m, inventario i " +
+                         "where i.Codigo = m.Codigo and  m.Laboratorio like '%" + (cual) + "%' " +
+                         "order by m.Laboratorio";
+            else
+                orden = "select m.Codigo, m.Nombre, m.Laboratorio, m.Unidad, i.Cantidad, i.Fecha_Vencimiento" +
+                         " from Medicamentos m, Inventario i " +
+                         "where i.Codigo = m.Codigo " +
+                          "order by m.nombre";
+
+            SqlCommand cmd = new SqlCommand(orden, conexion);
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter();
+
+            try
+            {
+                AbrirConexion();
+                cmd.ExecuteNonQuery();
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error al listar registros", e);
+            }
+            finally
+            {
+                CerrarConexion();
+                cmd.Dispose();
+            }
+            return ds;
+        }
+
         public DataSet consultarVencimiento(int tiempo)
         {
             string orden = string.Empty;

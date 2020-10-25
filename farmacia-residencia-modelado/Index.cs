@@ -84,6 +84,27 @@ namespace farmacia_residencia_modelado
                 }
             }
         }
+
+        private void LlenarDgLabo(string cual)
+        {
+            dg.Rows.Clear();
+            if (cual == "")
+            {
+                ds = medic.consultarLaboratorio("");
+            }
+            else
+            {
+                ds = medic.consultarLaboratorio(cual);
+            }
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    dg.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5]);
+                }
+            }
+        }
         #endregion
 
         #region EVENTOS
@@ -109,5 +130,10 @@ namespace farmacia_residencia_modelado
             LlenarDgCodigo(txt_codigo.Text);
         }
         #endregion
+
+        private void txt_labo_TextChanged(object sender, EventArgs e)
+        {
+            LlenarDgLabo(txt_labo.Text);
+        }
     }
 }
