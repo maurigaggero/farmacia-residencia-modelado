@@ -133,9 +133,10 @@
             this.combo_venc.Items.AddRange(new object[] {
             "Todas",
             "Solo vencidas",
-            "Vencen esta semana",
-            "Vencen este mes",
-            "Vencen próximos meses"});
+            "Vencen dentro 7 días",
+            "Vencen dentro 30 días",
+            "Vencen próximos meses",
+            "Vencen el próximo año"});
             this.combo_venc.Location = new System.Drawing.Point(546, 57);
             this.combo_venc.Name = "combo_venc";
             this.combo_venc.Size = new System.Drawing.Size(150, 24);
