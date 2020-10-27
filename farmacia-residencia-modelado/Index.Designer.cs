@@ -43,7 +43,6 @@
             this.txt_codigo = new System.Windows.Forms.TextBox();
             this.lbl_labo = new System.Windows.Forms.Label();
             this.txt_labo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,7 +108,7 @@
             this.lbl_fecha.AutoSize = true;
             this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.Color.White;
-            this.lbl_fecha.Location = new System.Drawing.Point(550, 40);
+            this.lbl_fecha.Location = new System.Drawing.Point(543, 38);
             this.lbl_fecha.Name = "lbl_fecha";
             this.lbl_fecha.Size = new System.Drawing.Size(124, 16);
             this.lbl_fecha.TabIndex = 6;
@@ -133,13 +132,13 @@
             this.combo_venc.FormattingEnabled = true;
             this.combo_venc.Items.AddRange(new object[] {
             "Todas",
-            "Vencidas",
-            "Esta semana",
-            "Este mes",
-            "Este año"});
-            this.combo_venc.Location = new System.Drawing.Point(553, 57);
+            "Solo vencidas",
+            "Vencen esta semana",
+            "Vencen este mes",
+            "Vencen próximos meses"});
+            this.combo_venc.Location = new System.Drawing.Point(546, 57);
             this.combo_venc.Name = "combo_venc";
-            this.combo_venc.Size = new System.Drawing.Size(143, 24);
+            this.combo_venc.Size = new System.Drawing.Size(150, 24);
             this.combo_venc.TabIndex = 3;
             this.combo_venc.SelectedIndexChanged += new System.EventHandler(this.combo_venc_SelectedIndexChanged);
             // 
@@ -181,20 +180,9 @@
             this.txt_labo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_labo.Location = new System.Drawing.Point(391, 57);
             this.txt_labo.Name = "txt_labo";
-            this.txt_labo.Size = new System.Drawing.Size(122, 22);
+            this.txt_labo.Size = new System.Drawing.Size(115, 22);
             this.txt_labo.TabIndex = 2;
             this.txt_labo.TextChanged += new System.EventHandler(this.txt_labo_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(58, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "*Aclaración. No filtra en simultáneo";
             // 
             // Index
             // 
@@ -202,7 +190,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(752, 495);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_labo);
             this.Controls.Add(this.txt_labo);
             this.Controls.Add(this.lbl_nombre);
@@ -239,7 +226,6 @@
         private System.Windows.Forms.TextBox txt_codigo;
         private System.Windows.Forms.Label lbl_labo;
         private System.Windows.Forms.TextBox txt_labo;
-        private System.Windows.Forms.Label label1;
     }
 }
 

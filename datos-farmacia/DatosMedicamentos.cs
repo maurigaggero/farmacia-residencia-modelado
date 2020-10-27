@@ -118,7 +118,7 @@ namespace datos_farmacia
                 case 4:
                     orden = "select m.Codigo, m.nombre, m.laboratorio, m.unidad, i.cantidad, i.Fecha_Vencimiento" +
                           " from Medicamentos m, inventario i " +
-                          "where i.Codigo = m.Codigo and Fecha_Vencimiento BETWEEN getdate() AND dateadd(year," + +1 + ", getdate()) " +
+                          "where i.Codigo = m.Codigo and Fecha_Vencimiento BETWEEN getdate() AND dateadd(yy, datediff(yy, 0, getdate()) + 1, -1) " +
                           "order by i.Fecha_Vencimiento asc";
                     break;
             }
