@@ -124,7 +124,7 @@ namespace datos_farmacia
                 case 5:
                     orden = "select m.Codigo, m.nombre, m.laboratorio, m.unidad, i.cantidad, i.Fecha_Vencimiento" +
                           " from Medicamentos m, inventario i " +
-                          "where i.Codigo = m.Codigo and Fecha_Vencimiento BETWEEN dateadd(yy, datediff(yy, 0, getdate()) + 1, -1) AND dateadd(yy, datediff(yy, 0, getdate()) + 2, -1) " +
+                          "where i.Codigo = m.Codigo and Fecha_Vencimiento BETWEEN dateadd(yy, datediff(yy, 0, getdate()) + 1, 0) AND dateadd(yy, datediff(yy, 0, getdate()) + 2, -1) " +
                           "order by i.Fecha_Vencimiento asc";
                     break;
             }
