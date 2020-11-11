@@ -16,7 +16,7 @@ namespace farmacia_residencia_modelado
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Index());
+            Application.Run(new Medicamentos());
         }
     }
 }

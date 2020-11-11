@@ -11,12 +11,12 @@ using datos_farmacia;
 
 namespace farmacia_residencia_modelado
 {
-    public partial class Index : Form
+    public partial class Medicamentos : Form
     {
         DatosMedicamentos medic = new DatosMedicamentos();
 
         DataSet ds = new DataSet();
-        public Index()
+        public Medicamentos()
         {
             InitializeComponent();
         }

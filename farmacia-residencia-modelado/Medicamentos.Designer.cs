@@ -1,6 +1,6 @@
 ﻿namespace farmacia_residencia_modelado
 {
-    partial class Index
+    partial class Medicamentos
     {
         /// <summary>
         /// Variable del diseñador necesaria.
